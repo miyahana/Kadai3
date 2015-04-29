@@ -49,5 +49,18 @@ public class SnakeCamelUtilTest {
 		String actual = scu.camelToSnakecase("HaNaeMIyachi");
 		assertThat(actual,is(expected));
 	}
-	
+	@Test
+	public void snakeToCamelcaseでhanae_miyachiをスネークケースに直す() {
+		SnakeCamelUtil scu = new SnakeCamelUtil();
+		String expected = "HanaeMiyachi";
+		String actual = scu.snakeToCamelcase("hanae_miyachi");
+		assertThat(actual,is(expected));
+	}
+	@Test
+	public void snakeToCamelcaseでha_nae_m_iyachiをスネークケースに直す() {
+		SnakeCamelUtil scu = new SnakeCamelUtil();
+		String expected = "HaNaeMIyachi";
+		String actual = scu.snakeToCamelcase("ha_nae_m_iyachi");
+		assertThat(actual,is(expected));
+	}
 }
