@@ -21,4 +21,18 @@ public class SnakeCamelUtilTest {
 		String actual = scu.capitalize("yokohama");
 		assertThat(actual,is(expected));
 	}
+	@Test
+	public void uncapitalize‚ÅA‚ÌÅ‰‚Ì•¶š‚ğ¬•¶š‚É‚Å‚«‚é() {
+		SnakeCamelUtil scu = new SnakeCamelUtil();
+		String expected = "a";
+		String actual = scu.uncapitalize("A");
+		assertThat(actual,is(expected));
+	}
+	@Test
+	public void uncapitalize‚ÅYokohama‚ÌÅ‰‚Ì•¶š‚ğ¬•¶š‚É‚Å‚«‚é() {
+		SnakeCamelUtil scu = new SnakeCamelUtil();
+		String expected = "yokohama";
+		String actual = scu.uncapitalize("Yokohama");
+		assertThat(actual,is(expected));
+	}
 }
