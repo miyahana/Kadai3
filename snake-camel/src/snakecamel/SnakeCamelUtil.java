@@ -30,10 +30,14 @@ public class SnakeCamelUtil {
 	}
 	
 	static String capitalize(String s) {//‘å•¶š‚Ån‚ß‚é
+		if(s.length()!=0){
 		char first = s.charAt(0);
 		char upperFirst = Character.toUpperCase(first);
 		String rest = s.substring(1);
 		return upperFirst + rest;
+		}else{
+			return s;
+		}
 	}
 
 	static String uncapitalize(String s) {//¬•¶š‚Ån‚ß‚é
